@@ -8,6 +8,10 @@ export default Ember.Route.extend({
     save(newPost) {
       var thisPost = this.store.createRecord('post', newPost);
       thisPost.save();
+    },
+    delete(post) {
+      post.destroyRecord();
+      this.transitionTo('index');
     }
   }
 });
