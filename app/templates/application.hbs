@@ -1,2 +1,15 @@
-
-{{outlet}}
+<div class="container">
+  <header>
+    <h1>Luca and Pat's Blog</h1>
+  </header>
+  <hr>
+    {{outlet}}
+  <hr>
+  <footer>
+    {{#link-to 'index'}}Home{{/link-to}}
+    <br>
+    {{#link-to 'contact'}}Click here to get to the contact page{{/link-to}}
+    <br>
+    {{#link-to 'about'}}Click here to know a lot more about us{{/link-to}}
+  </footer>
+</div>
