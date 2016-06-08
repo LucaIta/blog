@@ -2,7 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
+    // var allPosts = this.store.findAll('post');
+    return this.store.query('post', {limitToLast: 5});
+
   },
   actions: {
     save(newPost) {
