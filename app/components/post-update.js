@@ -2,17 +2,21 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    save() {
+    update(post){
       var params = {
         title: this.get('title') ? this.get('title') : null,
-        content: this.get('content') ? this.get('content') : null,
+        content: this.get('story') ? this.get('story') : null,
         author: this.get('author') ? this.get('author') : null,
         date: this.get('date') ? this.get('date') : null
       };
-      console.log(params);
-      var shorterContent = params.content.slice(0,3);
-      params.shortContent = shorterContent;
-      this.sendAction('save', params);
+      Object.keys(params).forEach(function(key){
+        console.log(params[key]);
+        if(params[key] !== null) {
+          post.set(key,params[key]);
+        }
+      });
+      this.sendAction('update', post);
     }
   }
+
 });
