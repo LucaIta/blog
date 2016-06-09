@@ -1,0 +1,7 @@
+<h2>Comments:</h2>
+{{#each post.comments as |comment|}}
+  {{#link-to 'comment' comment.id}}
+    <p>Author: {{comment.authorComment}}</p>
+    <p>Comment: {{comment.comment}}</p>
+  {{/link-to}}
+{{/each}}

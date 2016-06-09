@@ -6,7 +6,7 @@ export default Ember.Component.extend({
       var params = {
         title: this.get('title') ? this.get('title') : null,
         content: this.get('content') ? this.get('content') : null,
-        author: this.get('author') ? this.get('author') : null,
+        author: this.get('postAuthor') ? this.get('postAuthor') : null,
         date: this.get('date') ? this.get('date') : null
       };
       console.log(params);

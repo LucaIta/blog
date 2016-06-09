@@ -1,4 +1,3 @@
 {{#each posts as |post|}}
   {{#link-to 'post' post.id}}{{post-detail post=post delete="delete"}}{{/link-to}}
 {{/each}}
-<button {{action 'posts' posts}}>Developer Button</button>

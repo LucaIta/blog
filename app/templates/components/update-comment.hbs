@@ -1,0 +1,15 @@
+<h1>Edit the comment</h1>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="author">Edit Author</label>
+      {{input value=author id="author"}}
+    </div>
+    <div class="form-group">
+      <label for="comment">Edit Comment</label>
+      {{input value=string id="string"}}
+    </div>
+    <button {{action 'update' comment}}>Update</button>
+  </form>
+
+</div>
