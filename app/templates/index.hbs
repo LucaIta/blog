@@ -1,3 +1,11 @@
-{{post-tile posts=model delete="delete"}}
+{{post-tile posts=model.posts delete="delete"}}
 
 {{new-post save="save"}}
+<h2>Latest comments</h2>
+{{#each model.comments as |comment|}}
+  {{#link-to 'post' comment.post}}
+    <p>Author: {{comment.authorComment}}</p>
+    <p>Comment: {{comment.comment}}</p>
+    <br>
+  {{/link-to}}
+{{/each}}

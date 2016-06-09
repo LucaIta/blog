@@ -1,3 +1,8 @@
 {{#each posts as |post|}}
-  {{#link-to 'post' post.id}}{{post-detail post=post delete="delete"}}{{/link-to}}
+  {{#link-to 'post' post.id}}
+    <p>{{post.title}}</p>
+    <p>{{post.author}}</p>
+    <p>{{post.date}}</p>
+    <p>{{post.content}}</p>
+  {{/link-to}}
 {{/each}}

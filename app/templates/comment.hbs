@@ -1,3 +1,5 @@
 <p>Author: {{model.authorComment}}</p>
 <p>Comment: {{model.comment}}</p>
 {{update-comment comment=model update="update"}}
+
+<button {{action 'delete' model}}>Delete Comment</button>
